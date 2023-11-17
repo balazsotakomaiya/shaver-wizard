@@ -1,14 +1,23 @@
+import styled from "styled-components";
+
 function App() {
   return (
     <>
-        <button
+        <StyledButton
             type="button"
-            className="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
         >
             Button text
-        </button>
+        </StyledButton>
     </>
   )
 }
+
+const StyledButton = styled.button`
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 4px;
+  color: #000;
+  cursor: pointer;
+`
 
 export default App
