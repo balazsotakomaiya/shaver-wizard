@@ -13,7 +13,7 @@ function App() {
             body: JSON.stringify({
                 query: `mutation {
                     checkoutCreate(input: {
-                      lineItems: [{variantId: "${globalId}", quantity: 1}]
+                      lineItems: [{variantId: "gid://shopify/ProductVariant/43903146459401", quantity: 1}]
                     }) {
                       checkout {
                         id
