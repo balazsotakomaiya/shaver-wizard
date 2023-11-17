@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 function App() {
     const createCheckout = async () => {
+        let globalId = btoa('gid://shopify/ProductVariant/43903146459401');
+
         const response = await fetch('https://shaver-hungary.myshopify.com/api/2023-10/graphql.json', {
             method: 'POST',
             headers: {
@@ -11,7 +13,7 @@ function App() {
             body: JSON.stringify({
                 query: `mutation {
                     checkoutCreate(input: {
-                      lineItems: [{variantId: "43903146459401", quantity: 1}]
+                      lineItems: [{variantId: "${globalId}", quantity: 1}]
                     }) {
                       checkout {
                         id
