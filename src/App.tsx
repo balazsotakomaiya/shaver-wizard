@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 function App() {
     const createCheckout = async () => {
-        let globalId = btoa('gid://shopify/ProductVariant/43903146459401');
+        // let globalId = btoa('gid://shopify/ProductVariant/43903146459401');
 
         const response = await fetch('https://shaver-hungary.myshopify.com/api/2023-10/graphql.json', {
             method: 'POST',
